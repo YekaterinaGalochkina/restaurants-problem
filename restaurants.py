@@ -16,7 +16,11 @@ def most_varied_visitor(visits):
 
     return result[0]
 
-
+# •	L = number of locations
+# •	V = total number of visits (total people across all locations)
+# •	P = number of unique people
+# Time complexity: O(V * L)
+# Space complexity: O(P * L)
 
 
 visits_1 = {
