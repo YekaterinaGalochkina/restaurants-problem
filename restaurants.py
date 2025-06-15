@@ -1,6 +1,22 @@
 def most_varied_visitor(visits):
-    # Write your solution here!
-    pass
+    persons = {}
+
+    for key, value in visits.items():
+        for item in value:
+            if item not in persons:
+                persons[item] = [key]
+            elif key not in persons[item]:
+                persons[item].append(key)
+
+    result = ['', 0]
+
+    for key, value in persons.items():
+        if len(value) > result[1]:
+            result = [key, len(value)]
+
+    return result[0]
+
+
 
 
 visits_1 = {
